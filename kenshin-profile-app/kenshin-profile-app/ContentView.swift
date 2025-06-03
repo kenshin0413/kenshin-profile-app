@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-//            Color.black
-//                    .edgesIgnoringSafeArea(.all)
+
             Image("background2")
                 .resizable()
                 .frame(width: 435, height: 860)
