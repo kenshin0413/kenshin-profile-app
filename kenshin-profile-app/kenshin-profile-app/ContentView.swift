@@ -19,44 +19,34 @@ struct ContentView: View {
                 .frame(height: 220)
                 .blur(radius: 1)
             
-            
-            
             VStack {
-//                MapView()
-//                    .frame(height: 220)
-//                    .blur(radius: 1)
-                
+
                 Spacer()
-                
                 
                 HStack {
                     
                     Text("    📍Chiba,Japan")
                         .font(.headline)
                         .fontDesign(.serif)
-                    
-//                        Spacer()
+                
                     MyImage()
                         
                     Text("👤iOSEngineer")
-    //                        .offset(x: -8)
+    
                         .font(.headline)
                         .fontDesign(.serif)
-    //                        .padding()
+    
                 }
-//                Spacer()
+
                 .padding()
-                
-//                    .offset(y: -145)
             
                 Text("Kenshin\nMiyamoto 🇯🇵")
                     .font(.largeTitle)
-//                    .foregroundColor(Color.white)
+
                     .fontWeight(.black)
                     .fontDesign(.serif)
                     .multilineTextAlignment(.center)
-//                    .padding(-140)
-                
+
                 Text("pastime")
                     .font(.title)
                     .fontDesign(.serif)
@@ -64,7 +54,6 @@ struct ContentView: View {
                     .strikethrough(color: .red)
                     
                 HStack {
-                    
                     
                     Image(systemName:"figure.fishing.circle")
                         .resizable()
