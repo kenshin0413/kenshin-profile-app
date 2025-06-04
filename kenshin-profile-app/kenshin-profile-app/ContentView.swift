@@ -9,37 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
 
             Image("background2")
                 .resizable()
                 .frame(width: 435, height: 860)
+        
+            MapView()
+                .frame(height: 220)
+                .blur(radius: 1)
+            
+            
+            
             VStack {
-                MapView()
-                    .frame(height: 220)
-                    .blur(radius: 1)
+//                MapView()
+//                    .frame(height: 220)
+//                    .blur(radius: 1)
+                
+                Spacer()
+                
+                
                 HStack {
                     
                     Text("    📍Chiba,Japan")
                         .font(.headline)
                         .fontDesign(.serif)
-                    Spacer()
+                    
+//                        Spacer()
+                    MyImage()
+                        
                     Text("👤iOSEngineer")
-                        .offset(x: -8)
+    //                        .offset(x: -8)
                         .font(.headline)
                         .fontDesign(.serif)
-                        .padding()
+    //                        .padding()
                 }
+//                Spacer()
+                .padding()
                 
-                MyImage()
-                    .offset(y: -145)
+//                    .offset(y: -145)
             
-                Text("         Kenshin\n     Miyamoto 🇯🇵")
+                Text("Kenshin\nMiyamoto 🇯🇵")
                     .font(.largeTitle)
 //                    .foregroundColor(Color.white)
                     .fontWeight(.black)
                     .fontDesign(.serif)
-                    .padding(-140)
+                    .multilineTextAlignment(.center)
+//                    .padding(-140)
                 
                 Text("pastime")
                     .font(.title)
