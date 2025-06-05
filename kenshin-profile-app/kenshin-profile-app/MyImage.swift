@@ -12,8 +12,7 @@ struct MyImage: View {
     var body: some View {
         Image("black")
             .resizable()
-            .scaledToFill()
-            .frame(width: 150,height: 150)
+            .frame(width: 110,height: 110)
             .clipShape(Circle())
             .overlay {
                 Circle().stroke(.gray, lineWidth: 2.5)
@@ -21,7 +20,6 @@ struct MyImage: View {
             .shadow(radius: 10)
     }
 }
-
 
 #Preview {
     MyImage()

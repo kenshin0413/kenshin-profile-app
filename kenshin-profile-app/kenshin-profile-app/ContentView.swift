@@ -25,20 +25,19 @@ struct ContentView: View {
                 
                 HStack {
                     
-                    Text("    📍Chiba,Japan")
+                    Text("📍Chiba,Japan")
                         .font(.headline)
                         .fontDesign(.serif)
-                
+
                     MyImage()
                         
                     Text("👤iOSEngineer")
-    
                         .font(.headline)
                         .fontDesign(.serif)
-    
+                        .padding(.trailing, 2)
                 }
 
-                .padding()
+                .padding(.top, 40)
             
                 Text("Kenshin\nMiyamoto 🇯🇵")
                     .font(.largeTitle)
