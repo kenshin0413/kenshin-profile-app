@@ -10,11 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
-
-            Image("background2")
-                .resizable()
-                .frame(width: 435, height: 860)
-        
+            
             MapView()
                 .frame(height: 220)
                 .blur(radius: 1)
@@ -28,13 +24,14 @@ struct ContentView: View {
                     Text("📍Chiba,Japan")
                         .font(.headline)
                         .fontDesign(.serif)
-
+                        .padding(.top, 75)
                     MyImage()
-                        
+                        .padding(.top, 60)
                     Text("👤iOSEngineer")
                         .font(.headline)
                         .fontDesign(.serif)
                         .padding(.trailing, 2)
+                        .padding(.top, 75)
                 }
 
                 .padding(.top, 40)
