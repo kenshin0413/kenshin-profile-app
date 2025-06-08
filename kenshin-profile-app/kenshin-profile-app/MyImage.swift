@@ -20,7 +20,6 @@ struct MyImage: View {
             .shadow(radius: 10)
     }
 }
-
 #Preview {
     MyImage()
 }

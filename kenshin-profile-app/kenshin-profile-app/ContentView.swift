@@ -10,11 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
-            
             MapView()
                 .frame(height: 220)
                 .blur(radius: 1)
-            
             VStack {
 
                 Spacer()
@@ -25,20 +23,20 @@ struct ContentView: View {
                         .font(.headline)
                         .fontDesign(.serif)
                         .padding(.top, 75)
+                    
                     MyImage()
                         .padding(.top, 60)
+                    
                     Text("👤iOSEngineer")
                         .font(.headline)
                         .fontDesign(.serif)
                         .padding(.trailing, 2)
                         .padding(.top, 75)
                 }
-
                 .padding(.top, 40)
             
                 Text("Kenshin\nMiyamoto 🇯🇵")
                     .font(.largeTitle)
-
                     .fontWeight(.black)
                     .fontDesign(.serif)
                     .multilineTextAlignment(.center)
@@ -60,7 +58,9 @@ struct ContentView: View {
                         .fontDesign(.serif)
                         .padding()
                 }
+                
                 HStack {
+                    
                     Image(systemName: "figure.baseball.circle")
                         .resizable()
                         .frame(width: 40,height: 40)
@@ -71,11 +71,13 @@ struct ContentView: View {
                         .padding()
                     
                 }
+                
                 Text("SNS")
                     .font(.title)
                     .fontDesign(.serif)
                     .fontWeight(.black)
                     .strikethrough(color: .red)
+                
                 HStack {
                     Image("github")
                         .resizable()
@@ -84,6 +86,7 @@ struct ContentView: View {
                         .font(.title2)
                         .fontDesign(.serif)
                 }
+                
                 HStack {
                     Image(systemName: "envelope.circle")
                         .resizable()
@@ -97,7 +100,6 @@ struct ContentView: View {
         }
     }
 }
-
 #Preview {
     ContentView()
 }

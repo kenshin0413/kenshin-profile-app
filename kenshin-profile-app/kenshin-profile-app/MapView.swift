@@ -19,10 +19,8 @@ struct MapView: View {
             center: CLLocationCoordinate2D(latitude: 35.5402650, longitude: 140.2634765),
             span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
         )
-        
     }
 }
-
 #Preview {
     MapView()
 }
