@@ -10,92 +10,68 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
-            MapView()
-                .frame(height: 220)
-                .blur(radius: 1)
-            VStack {
-
-                Spacer()
-                
-                HStack {
-                    
-                    Text("📍Chiba,Japan")
-                        .font(.headline)
+            NavigationStack {
+                MapView()
+                    .frame(height: 200)
+                    .blur(radius: 1)
+                VStack {
+                    HStack {
+                        Image(systemName: "mappin.and.ellipse")
+                            .foregroundStyle(Color.red)
+                            
+                        Text("Chiba,Japan")
+                            .font(.headline)
+                            .fontDesign(.serif)
+                        
+                        MyImage()
+                        
+                        Text("iOSEngineer")
+                            .font(.headline)
+                            .fontDesign(.serif)
+                            .padding(.trailing,20)
+                    }
+                    .padding(.top,-43)
+                    Text("Kenshin\nMiyamoto 🇯🇵")
+                        .font(.largeTitle)
+                        .fontWeight(.black)
                         .fontDesign(.serif)
-                        .padding(.top, 75)
+                        .multilineTextAlignment(.center)
+                        
+                    NavigationLink {
+                        Pastime()
+                    } label: {
+                        Text("Pastime")
+                                .font(.title)
+                                .fontDesign(.serif)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 10)
+                                .background(Capsule()
+                                        .fill(Color.black)
+                                        .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                        .shadow(color: .white, radius: 5))
+                    }
+                    .padding()
                     
-                    MyImage()
-                        .padding(.top, 60)
-                    
-                    Text("👤iOSEngineer")
-                        .font(.headline)
-                        .fontDesign(.serif)
-                        .padding(.trailing, 2)
-                        .padding(.top, 75)
+                    NavigationLink {
+                        SNS()
+                    } label: {
+                        Text("SNS")
+                            .font(.title)
+                            .fontDesign(.serif)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 10)
+                            .background(Capsule()
+                                    .fill(Color.black)
+                                    .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                    .shadow(color: .white, radius: 5)
+                            )
+                    }
+                    Spacer()
                 }
-                .padding(.top, 40)
-            
-                Text("Kenshin\nMiyamoto 🇯🇵")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .fontDesign(.serif)
-                    .multilineTextAlignment(.center)
-
-                Text("pastime")
-                    .font(.title)
-                    .fontDesign(.serif)
-                    .fontWeight(.black)
-                    .strikethrough(color: .red)
-                    
-                HStack {
-                    
-                    Image(systemName:"figure.fishing.circle")
-                        .resizable()
-                        .frame(width: 40,height: 40)
-                    
-                    Text("Fishing")
-                        .font(.title2)
-                        .fontDesign(.serif)
-                        .padding()
-                }
-                
-                HStack {
-                    
-                    Image(systemName: "figure.baseball.circle")
-                        .resizable()
-                        .frame(width: 40,height: 40)
-                    
-                    Text("Baseball")
-                        .font(.title2)
-                        .fontDesign(.serif)
-                        .padding()
-                    
-                }
-                
-                Text("SNS")
-                    .font(.title)
-                    .fontDesign(.serif)
-                    .fontWeight(.black)
-                    .strikethrough(color: .red)
-                
-                HStack {
-                    Image("github")
-                        .resizable()
-                        .frame(width: 40,height: 40)
-                    Text("kenshin0413")
-                        .font(.title2)
-                        .fontDesign(.serif)
-                }
-                
-                HStack {
-                    Image(systemName: "envelope.circle")
-                        .resizable()
-                        .frame(width: 40,height: 40)
-                    Text("kenshin1234569@gmail.com")
-                        .font(.title2)
-                        .fontDesign(.serif)
-                }
-                Spacer()
+                .navigationTitle("Profile")
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
