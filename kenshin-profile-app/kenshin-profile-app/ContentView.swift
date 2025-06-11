@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack {
             NavigationStack {
                 MapView()
                     .frame(height: 200)
-                    .blur(radius: 1)
+                    .blur(radius: 0.1)
                 VStack {
                     HStack {
                         Image(systemName: "mappin.and.ellipse")
                             .foregroundStyle(Color.red)
-                            
+                        
                         Text("Chiba,Japan")
                             .font(.headline)
                             .fontDesign(.serif)
@@ -36,20 +36,20 @@ struct ContentView: View {
                         .fontWeight(.black)
                         .fontDesign(.serif)
                         .multilineTextAlignment(.center)
-                        
+                    
                     NavigationLink {
                         Pastime()
                     } label: {
-                        Text("Pastime")
-                                .font(.title)
-                                .fontDesign(.serif)
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 24)
-                                .padding(.vertical, 10)
-                                .background(Capsule()
-                                        .fill(Color.black)
-                                        .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                        .shadow(color: .white, radius: 5))
+                        Text("Hobby")
+                            .font(.title)
+                            .fontDesign(.serif)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 10)
+                            .background(Capsule()
+                                .fill(Color.black)
+                                .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                .shadow(color: .white, radius: 5))
                     }
                     .padding()
                     
@@ -60,13 +60,12 @@ struct ContentView: View {
                             .font(.title)
                             .fontDesign(.serif)
                             .foregroundColor(.white)
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, 40)
                             .padding(.vertical, 10)
                             .background(Capsule()
-                                    .fill(Color.black)
-                                    .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                    .shadow(color: .white, radius: 5)
-                            )
+                                .fill(Color.black)
+                                .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                .shadow(color: .white, radius: 5))
                     }
                     Spacer()
                 }

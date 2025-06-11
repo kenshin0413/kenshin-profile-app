@@ -28,11 +28,11 @@ struct Pastime: View {
                         .font(.title)
                 }
             }
-            .navigationTitle("Pastime")
-                    .navigationBarTitleDisplayMode(.inline)
-        }
+            .navigationTitle("Hobby")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
+}
 #Preview {
     Pastime()
 }
