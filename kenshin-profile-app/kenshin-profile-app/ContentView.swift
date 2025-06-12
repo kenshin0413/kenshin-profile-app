@@ -15,12 +15,7 @@ struct ContentView: View {
                     .blur(radius: 0.1)
                 VStack {
                     HStack {
-                        Image(systemName: "mappin.and.ellipse")
-                            .foregroundStyle(Color.red)
-                        
-                        Text("Chiba,Japan")
-                            .font(.headline)
-                            .fontDesign(.serif)
+                        Label("Chiba,Japan", systemImage: "mappin.and.ellipse")
                         
                         MyImage()
                         
@@ -43,7 +38,7 @@ struct ContentView: View {
                             .font(.title)
                             .fontDesign(.serif)
                             .foregroundColor(.white)
-                            .padding(.horizontal, 24)
+                            .frame(maxWidth: 130)
                             .padding(.vertical, 10)
                             .background {
                               Capsule()
@@ -61,7 +56,7 @@ struct ContentView: View {
                             .font(.title)
                             .fontDesign(.serif)
                             .foregroundColor(.white)
-                            .padding(.horizontal, 40)
+                            .frame(maxWidth: 130)
                             .padding(.vertical, 10)
                             .background {
                               Capsule()

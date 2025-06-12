@@ -20,11 +20,18 @@ struct SNSView: View {
                         .font(.title)
                 }
                 HStack {
-                    Image(systemName: "envelope.circle")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .padding()
-                    Text("kenshin1234569@gmail.com")
+                    Label(
+                        title: {
+                            Text("kenshin1234569@gmail.com")
+                                .font(.callout)
+                                .padding()
+                        },icon: {
+                            Image(systemName: "envelope.circle")
+                                .resizable()
+                                .frame(width: 55, height: 55)
+                        }
+                    )
+                    .padding(.leading, 27)
                 }
                 HStack {
                     Image("X")
@@ -43,3 +50,4 @@ struct SNSView: View {
 #Preview {
     SNSView()
 }
+

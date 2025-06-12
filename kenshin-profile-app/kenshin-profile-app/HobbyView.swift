@@ -12,20 +12,16 @@ struct HobbyView: View {
         NavigationStack {
             List {
                 HStack {
-                    Image(systemName: "figure.fishing.circle")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .padding()
-                    Text("Fishing")
+                    Label("Fishing", systemImage: "figure.fishing.circle")
                         .font(.title)
+                        .fontDesign(.serif)
+                        .padding()
                 }
                 HStack {
-                    Image(systemName: "figure.baseball.circle")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .padding()
-                    Text("Baseball")
+                    Label("Baseball", systemImage: "figure.baseball.circle")
                         .font(.title)
+                        .fontDesign(.serif)
+                        .padding()
                 }
             }
             .navigationTitle("Hobby")
