@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
             NavigationStack {
                 MapView()
                     .frame(height: 200)
@@ -28,7 +27,7 @@ struct ContentView: View {
                         Text("iOSEngineer")
                             .font(.headline)
                             .fontDesign(.serif)
-                            .padding(.trailing,20)
+                            .padding(.trailing, 20)
                     }
                     .padding(.top,-43)
                     Text("Kenshin\nMiyamoto 🇯🇵")
@@ -38,7 +37,7 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                     
                     NavigationLink {
-                        Pastime()
+                        HobbyView()
                     } label: {
                         Text("Hobby")
                             .font(.title)
@@ -46,15 +45,17 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 24)
                             .padding(.vertical, 10)
-                            .background(Capsule()
-                                .fill(Color.black)
-                                .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                .shadow(color: .white, radius: 5))
+                            .background {
+                              Capsule()
+                                  .fill(Color.black)
+                                  .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                  .shadow(color: .white, radius: 5)
+                            }
                     }
                     .padding()
                     
                     NavigationLink {
-                        SNS()
+                        SNSView()
                     } label: {
                         Text("SNS")
                             .font(.title)
@@ -62,10 +63,12 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 40)
                             .padding(.vertical, 10)
-                            .background(Capsule()
-                                .fill(Color.black)
-                                .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                .shadow(color: .white, radius: 5))
+                            .background {
+                              Capsule()
+                                  .fill(Color.black)
+                                  .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                  .shadow(color: .white, radius: 5)
+                            }
                     }
                     Spacer()
                 }
@@ -74,7 +77,6 @@ struct ContentView: View {
             }
         }
     }
-}
 #Preview {
     ContentView()
 }

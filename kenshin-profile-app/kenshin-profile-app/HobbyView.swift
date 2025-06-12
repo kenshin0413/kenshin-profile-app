@@ -1,5 +1,5 @@
 //
-//  Pastime.swift
+//  Hobby.swift
 //  kenshin-profile-app
 //
 //  Created by miyamotokenshin on R 7/06/09.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Pastime: View {
+struct HobbyView: View {
     var body: some View {
         NavigationStack {
             List {
                 HStack {
                     Image(systemName: "figure.fishing.circle")
                         .resizable()
-                        .frame(width: 50,height: 50)
+                        .frame(width: 50, height: 50)
                         .padding()
                     Text("Fishing")
                         .font(.title)
@@ -22,7 +22,7 @@ struct Pastime: View {
                 HStack {
                     Image(systemName: "figure.baseball.circle")
                         .resizable()
-                        .frame(width: 50,height: 50)
+                        .frame(width: 50, height: 50)
                         .padding()
                     Text("Baseball")
                         .font(.title)
@@ -34,5 +34,5 @@ struct Pastime: View {
     }
 }
 #Preview {
-    Pastime()
+    HobbyView()
 }
