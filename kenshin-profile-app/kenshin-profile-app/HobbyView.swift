@@ -11,24 +11,23 @@ struct HobbyView: View {
     var body: some View {
         NavigationStack {
             List {
-                HStack {
-                    Label("Fishing", systemImage: "figure.fishing.circle")
-                        .font(.title)
-                        .fontDesign(.serif)
-                        .padding()
-                }
-                HStack {
-                    Label("Baseball", systemImage: "figure.baseball.circle")
-                        .font(.title)
-                        .fontDesign(.serif)
-                        .padding()
-                }
+                Label("Fishing", systemImage: "figure.fishing.circle")
+                    .font(.title)
+                    .fontDesign(.serif)
+                    .foregroundStyle(.black)
+                    .padding()
+                Label("Baseball", systemImage: "figure.baseball.circle")
+                    .font(.title)
+                    .fontDesign(.serif)
+                    .foregroundStyle(.black)
+                    .padding()
             }
             .navigationTitle("Hobby")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
+
 #Preview {
     HobbyView()
 }

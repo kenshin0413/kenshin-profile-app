@@ -12,7 +12,6 @@ struct ContentView: View {
             NavigationStack {
                 MapView()
                     .frame(height: 200)
-                    .blur(radius: 0.1)
                 VStack {
                     HStack {
                         Label("Chiba,Japan", systemImage: "mappin.and.ellipse")
@@ -30,7 +29,8 @@ struct ContentView: View {
                         .fontWeight(.black)
                         .fontDesign(.serif)
                         .multilineTextAlignment(.center)
-                    
+                }
+                VStack(spacing: 30) {
                     NavigationLink {
                         HobbyView()
                     } label: {
@@ -41,14 +41,12 @@ struct ContentView: View {
                             .frame(maxWidth: 130)
                             .padding(.vertical, 10)
                             .background {
-                              Capsule()
-                                  .fill(Color.black)
-                                  .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                  .shadow(color: .white, radius: 5)
+                                Capsule()
+                                    .fill(Color.black)
+                                    .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                    .shadow(color: .white, radius: 5)
                             }
                     }
-                    .padding()
-                    
                     NavigationLink {
                         SNSView()
                     } label: {
@@ -59,19 +57,20 @@ struct ContentView: View {
                             .frame(maxWidth: 130)
                             .padding(.vertical, 10)
                             .background {
-                              Capsule()
-                                  .fill(Color.black)
-                                  .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
-                                  .shadow(color: .white, radius: 5)
+                                Capsule()
+                                    .fill(Color.black)
+                                    .shadow(color: .black.opacity(0.8), radius: 5, x: 10, y: 10)
+                                    .shadow(color: .white, radius: 5)
                             }
                     }
+                }
                     Spacer()
                 }
                 .navigationTitle("Profile")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
-    }
+    
 #Preview {
     ContentView()
 }
