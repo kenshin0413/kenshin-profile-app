@@ -8,19 +8,28 @@
 import SwiftUI
 import MapKit
 
+extension CLLocationCoordinate2D {
+    static let parking = CLLocationCoordinate2D(latitude: 35.5397703, longitude: 140.2596600)
+}
 
 struct MapView: View {
-    var body: some View {
-        Map(initialPosition: .region(region), interactionModes: [])
-    }
+    @State private var position = MapCameraPosition.region(
+             MKCoordinateRegion(
+                center: .parking,
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            
+            )
+       )
     
-    private var region: MKCoordinateRegion {
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 35.5402650, longitude: 140.2634765),
-            span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+    var body: some View {
+        Map(position: $position, interactionModes: []) {
+            Marker("Parking", coordinate: .parking)
+        }
     }
 }
+
 #Preview {
     MapView()
 }
+
 
