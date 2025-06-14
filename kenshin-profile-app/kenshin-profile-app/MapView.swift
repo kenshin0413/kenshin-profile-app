@@ -14,12 +14,12 @@ extension CLLocationCoordinate2D {
 
 struct MapView: View {
     @State private var position = MapCameraPosition.region(
-             MKCoordinateRegion(
-                center: .parking,
-                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        MKCoordinateRegion(
+            center: .parking,
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
             
-            )
-       )
+        )
+    )
     
     var body: some View {
         Map(position: $position, interactionModes: []) {
@@ -31,5 +31,3 @@ struct MapView: View {
 #Preview {
     MapView()
 }
-
-
