@@ -1,0 +1,56 @@
+{
+  "source": "/Users/kenshin/Desktop/kenshin-profile-app/kenshin-profile-app/kenshin-profile-app/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Profile",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Kenshin\nMiyamoto 🇯🇵",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "Chiba,Japan",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "iOSEngineer",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Hobby",
+        "location": {
+          "startingColumn": 66,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "SNS",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 63
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,40 @@
+{
+  "source": "/Users/kenshin/Desktop/kenshin-profile-app/kenshin-profile-app/kenshin-profile-app/SNSView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "SNS",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "kenshin0413",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "kenshin1234569@gmail.com",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "@V8Hkn",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 47
+        }
+      }
+    ]
+  },
+  "version": 1
+}

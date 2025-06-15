@@ -28,6 +28,7 @@ struct SNSView: View {
                 Label(
                     title: {
                         Text("kenshin1234569@gmail.com")
+                            .tint(.primary)
                             .font(.callout)
                             .fontDesign(.serif)
                             .padding()
@@ -35,6 +36,7 @@ struct SNSView: View {
                         Image(systemName: "envelope.circle")
                             .resizable()
                             .scaledToFit()
+                            .foregroundStyle(.black)
                             .frame(width: 55, height: 55)
                     }
                 )
@@ -59,6 +61,7 @@ struct SNSView: View {
         }
     }
 }
+
 #Preview {
     SNSView()
 }

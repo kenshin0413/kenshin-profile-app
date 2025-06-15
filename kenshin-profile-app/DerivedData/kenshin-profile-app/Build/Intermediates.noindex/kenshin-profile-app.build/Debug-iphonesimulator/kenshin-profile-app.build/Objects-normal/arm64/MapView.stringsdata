@@ -1,0 +1,16 @@
+{
+  "source": "/Users/kenshin/Desktop/kenshin-profile-app/kenshin-profile-app/kenshin-profile-app/MapView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Parking",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 29
+        }
+      }
+    ]
+  },
+  "version": 1
+}

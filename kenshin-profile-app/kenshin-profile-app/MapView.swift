@@ -16,10 +16,7 @@ struct MapView: View {
     @State private var position = MapCameraPosition.region(
         MKCoordinateRegion(
             center: .parking,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            
-        )
-    )
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)))
     
     var body: some View {
         Map(position: $position, interactionModes: []) {

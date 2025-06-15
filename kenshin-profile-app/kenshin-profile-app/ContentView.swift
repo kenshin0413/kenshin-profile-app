@@ -10,29 +10,30 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 30) {
+                
                 MapView()
                     .frame(height: 200)
                 
                 HStack {
                     Label("Chiba,Japan", systemImage: "mappin.and.ellipse")
-                        .font(.headline)
                         .fontDesign(.serif)
+                        .frame(maxWidth: .infinity)
+                    
                     MyImage()
                     
-                    Text("iOSEngineer")
-                        .font(.headline)
+                    Label("iOSEngineer", systemImage: "person")
                         .fontDesign(.serif)
-                        .padding(.trailing, 20)
+                        .frame(maxWidth: .infinity)
                 }
-                .padding(.top,-43)
+                .padding(.top,-65)
+                
                 Text("Kenshin\nMiyamoto 🇯🇵")
                     .font(.largeTitle)
                     .fontWeight(.black)
                     .fontDesign(.serif)
                     .multilineTextAlignment(.center)
-            }
-            VStack(spacing: 30) {
+
                 NavigationLink {
                     HobbyView()
                 } label: {
@@ -49,6 +50,7 @@ struct ContentView: View {
                                 .shadow(color: .white, radius: 5)
                         }
                 }
+                
                 NavigationLink {
                     SNSView()
                 } label: {
@@ -65,8 +67,8 @@ struct ContentView: View {
                                 .shadow(color: .white, radius: 5)
                         }
                 }
+                Spacer()
             }
-            Spacer()
                 .navigationTitle("Profile")
                 .navigationBarTitleDisplayMode(.inline)
         }

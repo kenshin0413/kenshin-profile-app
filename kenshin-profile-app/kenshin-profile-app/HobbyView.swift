@@ -12,12 +12,11 @@ struct HobbyView: View {
         NavigationStack {
             List {
                 Label("Fishing", systemImage: "figure.fishing.circle")
-                    .font(.title)
                     .fontDesign(.serif)
                     .foregroundStyle(.primary)
                     .padding()
+                
                 Label("Baseball", systemImage: "figure.baseball.circle")
-                    .font(.title)
                     .fontDesign(.serif)
                     .foregroundStyle(.primary)
                     .padding()
