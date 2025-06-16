@@ -1,1 +1,0 @@
-@rpath/kenshin-profile-app.debug.dylib

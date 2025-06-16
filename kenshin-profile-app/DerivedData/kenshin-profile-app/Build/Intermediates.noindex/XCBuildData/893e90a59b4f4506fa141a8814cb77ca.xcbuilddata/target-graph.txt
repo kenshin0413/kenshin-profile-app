@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target 'kenshin-profile-app' in project 'kenshin-profile-app' (no dependencies)
